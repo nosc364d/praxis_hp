@@ -13,19 +13,16 @@ main {
 
 .all {
     display: grid;
-    grid-template-columns: 120px 1fr 1fr;
+    grid-template-columns: 120px 80%;
 }
 
 .nav {
     flex: 1;
 }
 
-.main {
-    flex: 1;
-}
-
 h1 {
     font-family: Georgia, serif;
+    justify-content: center;
 }
 
 ul {
@@ -64,10 +61,14 @@ li a.active {
     color:#00b0bd;
 }
 
-header {
-    position: relative;
+canvas {
+    color: #000;
 }
 
 footer {
     background-color: #eeeeee;
+}
+
+svg {
+    scale: 50%;
 }
