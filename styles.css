@@ -35,6 +35,7 @@ ul {
     margin-bottom: 1px;
     background-color: #68d2d9;
     flex: 1;
+    font-weight: bold;
 }
 
 li {
