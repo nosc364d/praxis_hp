@@ -1,28 +1,64 @@
-html,
-body {
-    background-color: #ffffff;
-    color: #00b0bd;
-    font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: lighter;
+:root {
+    --primary: #fefef0;
+    --accent: #68d2d9;
+    --secondary: #383838;
 }
 
-main {
+
+html,
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 0.93em;
+}
+
+div {
+    display: block;
+}
+
+.main {
     flex: 1;
     margin-left: 40px;
+    padding: 30px;
 }
 
 .all {
     display: grid;
-    grid-template-columns: 120px 80%;
+    grid-template-columns: 120px auto 120px;
 }
 
 .nav {
     flex: 1;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.menuButton {
+    flex: 1 100;
+    top: 30px;
+    background: var(--accent);
+    position: relative;
+}
+
+.menuButton:hover {
+    background: var(--primary);
+    transition: 0.2s ease-in-out;
+}
+
+.menuButton span {
+    width: 30px;
+    height: 2px;
+    background: var(--secondary);
 }
 
 h1 {
-    font-family: Georgia, serif;
+    text-align: center;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 ul {
@@ -31,10 +67,10 @@ ul {
     padding: 0px;
     width: 120px;
     height: 100vh;
-    position: sticky;
+    position: relative;
     margin-bottom: 1px;
     background-color: #68d2d9;
-    flex: 1;
+    flex: 6 100;
     font-weight: bold;
 }
 
@@ -53,23 +89,85 @@ li a {
 
 li a:hover {
     transition: 0.3s ease;
-    background-color: #ffffff;
-    color: #050505;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 li a.active {
-    background-color: #ffffff;
-    color:#00b0bd;
+    background-color: var(--primary);
+    color:var(--accent);
 }
 
 canvas {
     color: #000;
 }
 
+header {
+    display: flex;
+    max-height: 10%;
+    justify-content: center;
+    display: flex;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    flex: auto;
+}
+
 footer {
-    background-color: #eeeeee;
+    padding: 20px;
+    background-color: var(--primary);
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 svg {
     scale: 50%;
+}
+
+address {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.iconName {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .all {
+        display: grid;
+        grid-template-columns: 80px auto 80px;
+    }
+
+    .menuButton {
+        position: absolute;
+        top: 20px;
+        margin: 20px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    header {
+        
+    }
+}
+@media screen and (min-width: 1180px) {
+    img {
+        width: clamp(100px, 50%, 500px);
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
