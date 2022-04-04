@@ -7,7 +7,7 @@
 .darkMode {
     --primary: #413d3c;
     --accent: #1f8997;
-    --secondary: #d1d1d1;
+    --secondary: #ebebe3;
 }
 
 html,
@@ -48,6 +48,8 @@ div {
     display: flex;
     gap: 40px;
     flex-direction: column;
+    grid-row: 1 2;
+    grid-column: 1 1;
 }
 
 #menuButton {
@@ -93,21 +95,20 @@ h1 {
     height: 100vh;
     position: relative;
     margin-bottom: 1px;
-    background-color: #68d2d9;
+    background-color: var(--accent);
     flex: 6 100;
     font-weight: bold;
-    align-items: stretch;
 }
 
 li {
-    background-color: #68d2d9;
-    color: #68d2d9;
+    background-color: var(--accent);
+    color: var(--accent);
 }
 
 li a {
     display: block;
-    color: #000000;
-    background-color: #68d2d9;
+    color: #413d3c;
+    background-color: var(--accent);
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -132,6 +133,8 @@ header {
     max-height: 10%;
     justify-content: center;
     display: flex;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 img {
@@ -155,6 +158,8 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     gap: 20px;
+    grid-column: 2 3;
+    grid-row: 2 2;
 }
 
 svg {
@@ -171,6 +176,12 @@ address {
 .iconName {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#darkmode {
+    position: absolute;
+    right: 25px;
+    top: 25px;
 }
 
 @media screen and (max-width: 800px) {

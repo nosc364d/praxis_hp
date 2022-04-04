@@ -4,8 +4,13 @@ function changeSvgColor() {
 }
 
 function toggleMenu() {
-    let el = document.querySelectorAll("#navbar");
+    let el = document.querySelector("#navbar");
     el.classList.toggle("visible");
     let icon = document.querySelector("#menuButton");
     icon.classList.toggle("visible");
+}
+
+function toggleDarkmode() {
+    let dm = document.querySelector("body");
+    dm.classList.toggle("darkMode");
 }
