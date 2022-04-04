@@ -1,7 +1,7 @@
 :root {
-    --primary: #fefef0;
+    --primary: #f7f2e6;
     --accent: #68d2d9;
-    --secondary: #383838;
+    --secondary: #35405f;
 }
 
 
@@ -11,7 +11,7 @@ body {
     color: var(--secondary);
     font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    font-size: 0.93em;
+    font-size: 0.95em;
 }
 
 div {
@@ -22,10 +22,19 @@ div {
     flex: 1;
     margin-left: 40px;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .all {
     display: grid;
+    grid-template-rows: auto 20%;
     grid-template-columns: 120px auto 120px;
 }
 
@@ -41,6 +50,10 @@ div {
     top: 30px;
     background: var(--accent);
     position: relative;
+}
+
+.menuButton span {
+    transform: rotate(90);
 }
 
 .menuButton:hover {
@@ -119,7 +132,10 @@ img {
 
 footer {
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--primary);
+    grid-row: 2;
     position: absolute;
     justify-content: center;
     display: flex;
@@ -130,6 +146,7 @@ footer {
 
 svg {
     scale: 50%;
+    color: var(--secondary);
 }
 
 address {
@@ -157,10 +174,6 @@ address {
 
     ul {
         display: none;
-    }
-
-    header {
-        
     }
 }
 @media screen and (min-width: 1180px) {
