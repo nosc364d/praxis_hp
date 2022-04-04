@@ -6,15 +6,14 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="/imgs/1craniosym.png">
     </head>
-    <body>
+    <body class="lightMode">
         <div class="all">
             <div class="nav">
-                <button class="menuButton">
-                    <span>-</span>
-                    <span>-</span>
-                    <span>-</span>
+                <script src="script.js"></script>
+                <button id="menuButton" class="visible" onclick=toggleMenu() src="script.js">
+                    Menü
                 </button>
-                <ul>
+                <ul id="navbar" class="">
                     <li><a class="active" href="/home.html">Home</a></li>
                     <li><a href="/therapie.html">Therapie / Kosten</a></li>
                     <li><a href="/praxis.html">Vita / Praxis</a></li>
@@ -26,7 +25,7 @@
             <main>
                 <div class="main">
                     <header>
-                        <img src="logo_quer.png" alt="Logo der Praxis">
+                        <img src="wave.png" alt="Logo der Praxis">
                     </header>
                     <div class="content">
                         <h1>Herzlich Willkommen in der Naturheilpraxis

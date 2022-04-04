@@ -4,6 +4,11 @@
     --secondary: #35405f;
 }
 
+.darkMode {
+    --primary: #413d3c;
+    --accent: #1f8997;
+    --secondary: #d1d1d1;
+}
 
 html,
 body {
@@ -11,7 +16,7 @@ body {
     color: var(--secondary);
     font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 div {
@@ -45,26 +50,31 @@ div {
     flex-direction: column;
 }
 
-.menuButton {
+#menuButton {
     flex: 1 100;
     top: 30px;
     background: var(--accent);
     position: relative;
+    display: none;
 }
 
-.menuButton span {
+#menuButton span {
     transform: rotate(90);
 }
 
-.menuButton:hover {
+#menuButton:hover {
     background: var(--primary);
     transition: 0.2s ease-in-out;
 }
 
-.menuButton span {
+#menuButton span {
     width: 30px;
     height: 2px;
     background: var(--secondary);
+}
+
+.visible{
+    display: block;
 }
 
 h1 {
@@ -74,9 +84,10 @@ h1 {
     margin-top: 20px;
 }
 
-ul {
+#navbar {
+    display: block;
     list-style-type: none;
-    margin: 0;
+    margin: 0px;
     padding: 0px;
     width: 120px;
     height: 100vh;
@@ -85,6 +96,7 @@ ul {
     background-color: #68d2d9;
     flex: 6 100;
     font-weight: bold;
+    align-items: stretch;
 }
 
 li {
@@ -126,7 +138,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    max-width: 450px;
+    width: 100%;
     flex: auto;
 }
 
@@ -166,10 +179,11 @@ address {
         grid-template-columns: 80px auto 80px;
     }
 
-    .menuButton {
+    #menuButton {
         position: absolute;
         top: 20px;
         margin: 20px;
+        display: block;
     }
 
     ul {
@@ -178,8 +192,6 @@ address {
 }
 @media screen and (min-width: 1180px) {
     img {
-        width: clamp(100px, 50%, 500px);
-        
         margin-left: auto;
         margin-right: auto;
     }
