@@ -1,5 +1,5 @@
 :root {
-    --primary: #f7f2e6;
+    --primary: #f8f6f1;
     --accent: #68d2d9;
     --secondary: #35405f;
 }
@@ -35,6 +35,10 @@ div {
 .content {
     margin-left: auto;
     margin-right: auto;
+}
+
+content h2 {
+    margin-top: 30px;
 }
 
 .all {
@@ -117,6 +121,7 @@ li a:hover {
     transition: 0.3s ease;
     background-color: var(--primary);
     color: var(--secondary);
+    margin-left: 20px;
 }
 
 li a.active {
@@ -151,6 +156,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--primary);
+    color: var(--secondary);
     grid-row: 2;
     position: absolute;
     justify-content: center;
@@ -159,7 +165,10 @@ footer {
     justify-content: space-around;
     gap: 20px;
     grid-column: 2 3;
-    grid-row: 2 2;
+}
+
+address a {
+    color: var(--accent);
 }
 
 svg {
