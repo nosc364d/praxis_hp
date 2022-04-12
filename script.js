@@ -11,6 +11,6 @@ function toggleMenu() {
 }
 
 function toggleDarkmode() {
-    let dm = document.querySelector("body");
+    let dm = document.querySelector("html");
     dm.classList.toggle("darkMode");
 }

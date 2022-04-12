@@ -114,10 +114,12 @@ li a {
     display: block;
     color: var(--secondary);
     background-color: var(--accent);
+    width: 120px;
     height: 130px;
     width: 80px;
     padding-left: 20px;
     text-decoration: none;
+    text-align: center;
 }
 
 li a:hover {
@@ -177,6 +179,12 @@ footer {
 
 address a {
     color: var(--accent);
+    text-align: center;
+}
+
+address img {
+    width: 70px;
+    height: auto;
 }
 
 svg {
@@ -214,9 +222,7 @@ address {
         display: block;
     }
 
-    ul {
-        display: none;
-    }
+    
 }
 @media screen and (min-width: 1180px) {
     img {
